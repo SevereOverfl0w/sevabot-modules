@@ -10,17 +10,12 @@ import random
 import urllib
 from pyquery import PyQuery as pq
 
+
 def define(args):
     word = " ".join(args)
 
-    if word == "Edy":
-        word = "stupid"
-    #if word == "vegan":
-    #    word = "pretentious"
-
-    if word == "Garrett":
-        rajaWords = ["crybaby", "woman", "sensitive", "insecure"]
-        word = rajaWords[random.randint(0, len(rajaWords)-1)]
+    if word == "Amir":
+        word = "amir"
 
 
     wordParam = urllib.quote_plus(word)
@@ -67,8 +62,7 @@ def define(args):
                     text += pq(child).text()
 
                 print text.encode("utf-8")
-        else:
-            print "No definition for " + word + ".  Did Edy type this one?"
-
+        else:        
+           print "No definition for " + word + ". Try to change the casing."
 
 define(sys.argv[1:])
