@@ -22,7 +22,7 @@ try:
         "We have a winner! (rofl)"
     ]
 
-    text = "I give that a " + str(count) + "/10. " + flavorText[count] + "\n"
+    text = "I give that a %d/10. %s\n" % (count, flavorText[count])
 
 
     for i in range(0, count, 1):
