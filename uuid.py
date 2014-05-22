@@ -17,7 +17,7 @@ def call_uuid_api(name):
         uuid = payload['uuid']
         migrated = payload['migrated']
         premium = payload['premium']
-        print ('UUID of %s is ' % name + uuid)
+        print ('UUID of %s is %s' % (name ,uuid))
         if premium == 'true':
             print('This account is premium!')
             if migrated == 'true':
