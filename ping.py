@@ -18,11 +18,11 @@ def grab_server_data(server):
         max_players=payload['players']['max']
         server_motd=payload['motd']
         minecraft_version=payload['version']
-        print('The server %s is up with ' % server + str(online_players) + '/'+ str(max_players))
-        print("The server's MOTD is: "+server_motd)
-        print("The server is running Minecraft version: " + minecraft_version)
+        print('The server %s is up with %d/%d' % (server, online_players, max_players))
+        print("The server's MOTD is: %s" % (server_motd,) )
+        print("The server is running Minecraft version: %s" % (minecraft_version,))
     else:
-        print('Are you sure %s is a server?' % server)
+        print('Are you sure %s is a server?' % (server))
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         sys.exit("You must enter a server IP")
