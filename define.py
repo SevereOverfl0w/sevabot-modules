@@ -16,7 +16,8 @@ def define(args):
 
     if word == "Amir":
         word = "amir"
-
+    if "overfl0w" in word:
+        word = "zerocool"
 
     wordParam = urllib.quote_plus(word)
 
